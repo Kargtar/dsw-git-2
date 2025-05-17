@@ -28,6 +28,20 @@ while test $# -gt 0; do
 			exit 0
 		;;
 
+		--init)
+			if [[ "${BASH_SOURCE[0]}" != "$0" ]]; then
+				git clone https://github.com/Kargtar/dsw-git-2.git
+				case "$PATH" in
+					*$(pwd)/dsw-git-2*) : ;;
+					*) export PATH=$PATH:$(pwd)/dsw-git-2 ;;
+				esac
+				return 0
+			else
+				echo "skrypt musi być uruchomiony za pomocą 'source' żeby zmiany w PATH pojawiły się w parent shell'u"
+				exit 1
+			fi
+		;;
+
 		*)
 			break
 		;;
