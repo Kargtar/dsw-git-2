@@ -1,5 +1,11 @@
 while test $# -gt 0; do
 	case "$1" in
+		--help)
+			echo "--date - wyświetla dzisiejszą datę w formacie dzien.miesiąc.rok"
+			echo "--logs [liczba] - utworzy automatycznie [liczba] plików log[liczba].txt, [liczba] – numerpliku od 1 do [liczba]. Domyślna [liczba] - 100"
+			exit 0
+		;;
+
 		--date)
 			date +%d.%m.%Y
 			exit 0
