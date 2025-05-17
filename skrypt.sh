@@ -1,8 +1,9 @@
 while test $# -gt 0; do
 	case "$1" in
 		--help|-h)
-			echo "--date - wyświetla dzisiejszą datę w formacie dzien.miesiąc.rok"
-			echo "--logs [liczba] - utworzy automatycznie [liczba] plików log[liczba].txt, [liczba] – numerpliku od 1 do [liczba]. Domyślna [liczba] - 100"
+			echo "--help, -h - wyświetla ten tekst"
+			echo "--date, -d - wyświetla dzisiejszą datę w formacie dzien.miesiąc.rok"
+			echo "--logs [liczba], -l [liczba] - utworzy automatycznie [liczba] plików log[liczba].txt, [liczba] – numerpliku od 1 do [liczba]. Domyślna [liczba] - 100"
 			exit 0
 		;;
 
