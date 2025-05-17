@@ -28,6 +28,24 @@ while test $# -gt 0; do
 			exit 0
 		;;
 
+		--error|-e)
+			shift
+			if test $# -gt 0; then
+				export fin=$1
+			else
+				export fin=100
+			fi
+			shift
+			for i in $(seq 1 $fin);
+			do
+				mkdir error$i
+				echo "error$i.txt" > error$i/error$i.txt
+				echo "${0##*/}" >> error$i/error$i.txt
+				echo "$(date +%d.%m.%Y)" >> error$i/error$i.txt
+			done
+			exit 0
+		;;
+
 		--init)
 			if [[ "${BASH_SOURCE[0]}" != "$0" ]]; then
 				git clone https://github.com/Kargtar/dsw-git-2.git
