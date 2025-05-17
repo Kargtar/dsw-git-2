@@ -4,6 +4,8 @@ while test $# -gt 0; do
 			echo "--help, -h - wyświetla ten tekst"
 			echo "--date, -d - wyświetla dzisiejszą datę w formacie dzien.miesiąc.rok"
 			echo "--logs [liczba], -l [liczba] - utworzy automatycznie [liczba] plików log[liczba].txt, [liczba] – numerpliku od 1 do [liczba]. Domyślna [liczba] - 100"
+			echo "--error [liczba], -e [liczba] - utworzy automatycznie [liczba] plików error[liczba].txt, [liczba] – numerpliku od 1 do [liczba]. Domyślna [liczba] - 100"
+			echo "--init - klonuje całe repozytorium do katalogu w którym został uruchomiony oraz ustawia ścieżkę w zmiennej środowiskowej PATH. Musi być uruchomiony za pomocą source, np. source skrypt.sh --init"
 			exit 0
 		;;
 
